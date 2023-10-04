@@ -63,7 +63,7 @@ if command -v pip &>/dev/null; then
     yellow_msg "Installing a cool package for testing..."
     pip install cowsay
     echo "Testing the cool package..."
-    cowsay "This is a test message with cowsay!"
+    cowsay -t "This is a test message with cowsay!"
 else
     yellow_msg "pip is not installed. Skipping the cool package installation."
 fi
