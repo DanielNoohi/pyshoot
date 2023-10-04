@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Function for colored output
+yellow_msg() {
+    echo -e "\e[93m$1\e[0m"
+}
+
 echo "Update Everything..."
 
 sleep 0.5
@@ -52,3 +57,6 @@ pip install virtualenv django numpy requests
 pip install python-telegram-bot
 
 echo "Installation complete. Enjoy coding with Django and other essential Python packages!"
+
+yellow_msg "Installation complete. Enjoy coding with Django and other essential Python packages!"
+
