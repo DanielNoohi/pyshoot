@@ -18,12 +18,6 @@ echo
 yellow_msg 'Updating the System.'
 echo 
 
-echo
-blue_msg "Sit Tight..."
-echo
-
-sleep 0.5
-
 sleep 0.5
 
 sudo apt update
@@ -78,3 +72,4 @@ fi
 yellow_msg "Installation complete. Enjoy coding with Django and other essential Python packages!"
 echo
 blue_msg "All Done!"
+echo
