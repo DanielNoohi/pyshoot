@@ -7,13 +7,20 @@ yellow_msg() {
     echo -e "\e[93m$1\e[0m"
 }
 
-echo "Update Everything..."
+blue_msg() {
+    echo -e "\e[94m$1\e[0m"
+}
+
 
 sleep 0.5
 
 echo 
 yellow_msg 'Updating the System.'
 echo 
+
+echo
+blue_msg "Sit Tight..."
+echo
 
 sleep 0.5
 
@@ -68,7 +75,6 @@ else
     yellow_msg "pip is not installed. Skipping the cool package installation."
 fi
 
-echo "Installation complete. Enjoy coding with Django and other essential Python packages!"
-
 yellow_msg "Installation complete. Enjoy coding with Django and other essential Python packages!"
-
+echo
+blue_msg "All Done!"
