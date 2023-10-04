@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Function for colored output
 yellow_msg() {
     echo -e "\e[93m$1\e[0m"
