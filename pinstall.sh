@@ -58,6 +58,16 @@ pip install virtualenv django numpy requests
 # Install Telegram bot library
 pip install python-telegram-bot
 
+# Check if pip is installed and install a cool package for testing
+if command -v pip &>/dev/null; then
+    yellow_msg "Installing a cool package for testing..."
+    pip install cowsay
+    echo "Testing the cool package..."
+    cowsay "This is a test message with cowsay!"
+else
+    yellow_msg "pip is not installed. Skipping the cool package installation."
+fi
+
 echo "Installation complete. Enjoy coding with Django and other essential Python packages!"
 
 yellow_msg "Installation complete. Enjoy coding with Django and other essential Python packages!"
