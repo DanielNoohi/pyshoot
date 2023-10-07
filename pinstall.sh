@@ -80,3 +80,31 @@ yellow_msg "Installation complete. Enjoy coding with Django and other essential 
 echo
 blue_msg "All Done!"
 echo
+
+sleep 1.5
+
+# Check if the system needs to reboot
+if [ -f /var/run/reboot-required ]; then
+    echo "The system needs to reboot."
+    
+    # Ask for confirmation to reboot
+    while true; do
+        read -p "Do you want to reboot now? (y/n) " choice
+        case "$choice" in 
+            y|Y ) 
+                echo "Rebooting now..."
+                sudo reboot
+                ;;
+            n|N ) 
+                echo "Reboot cancelled."
+                break
+                ;;
+            * ) 
+                echo "Invalid input. Please enter 'y' or 'n'."
+                ;;
+        esac
+    done
+else
+    echo "The system does not need to reboot."
+fi
+
