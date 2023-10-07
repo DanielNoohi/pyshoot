@@ -34,7 +34,14 @@ sudo apt -y upgrade
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
 
-echo "Installing essential Python packages and tools..."
+blue_msg 'Installing essential Python packages and tools...'
+
+sleep 1
+
+# System utilities
+sudo apt -y install apt-utils bash-completion busybox ca-certificates cron curl gnupg2 locales lsb-release nano preload screen software-properties-common ufw unzip vim wget xxd zip
+
+sleep 1
 
 # Check if Python is installed
 if command -v python3 &>/dev/null; then
